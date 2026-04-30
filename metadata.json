@@ -1,0 +1,6 @@
+{
+  "name": "ZenFocus",
+  "description": "A minimalist focus timer with custom intervals, intermission buffers, and visual progress tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
