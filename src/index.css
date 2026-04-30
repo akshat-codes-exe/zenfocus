@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  /* Light Mode */
+  --color-primary: #354F52;
+  --color-accent-sage: #8B9A82;
+  --color-accent-sand: #D4A373;
+  --color-bg-cream: #FDFCF8;
+  --color-border-light: #E9EED9;
+  --color-text-muted: #5A5A40;
+
+  /* Dark Mode Overrides (used via manual class) */
+  --color-dark-bg: #222c31;
+  --color-dark-card: #2a363d;
+  --color-dark-border: #354F52;
+  --color-dark-text: #cad2c5;
+}
+
+@layer base {
+  body {
+    @apply transition-colors duration-500;
+  }
+  
+  .dark body {
+    @apply bg-[#222c31] text-[#cad2c5];
+  }
+
+  .light body {
+    @apply bg-[#FDFCF8] text-[#354F52];
+  }
+}
+
+@layer utilities {
+  .thin-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .thin-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .thin-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-[#E9EED9] rounded-full;
+  }
+  .thin-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#D4A373];
+  }
+}
